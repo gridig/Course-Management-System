@@ -1,0 +1,19 @@
+<header class="header">
+  <nav class="nav">
+    <h1 class="title">
+      <a class="nav-link active">Course Management System</a>
+    </h1>
+  </nav>
+</header>
+<div>
+  <div class="sidebar">
+    <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+      <a class="nav-link nav-link-sidebar" [routerLink]="['/home']" routerLinkActive="active" role="tab">Home</a>
+      <a class="nav-link nav-link-sidebar" [routerLink]="['/courses']" routerLinkActive="active" role="tab">Courses</a>
+      <a class="nav-link nav-link-sidebar" [routerLink]="['/students']" routerLinkActive="active" role="tab">Students</a>
+    </div>
+  </div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
