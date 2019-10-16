@@ -24,10 +24,16 @@ export class CourseListComponent implements OnInit {
     this.courses = this.courseService.getCourses();
   }
 
-  editCourse(selectedCourse: CourseModel) {
-    this.bsModalRef = this.modalService.show(CourseModalComponent, { initialState: selectedCourse });
+  editCourse(course: CourseModel) {
+    this.bsModalRef = this.modalService.show(CourseModalComponent, { initialState: {course} });
     this.bsModalRef.content.closeBtnName = 'Close';
     this.bsModalRef.content.title = 'Edit Course';
+  }
+
+  addCourse() {
+    this.bsModalRef = this.modalService.show(CourseModalComponent);
+    this.bsModalRef.content.closeBtnName = 'Close';
+    this.bsModalRef.content.title = 'Add Course';
   }
 }
 

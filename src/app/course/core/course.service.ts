@@ -32,4 +32,11 @@ export class CourseService {
     return COURSES;
   }
 
+  createCourse(course: CourseModel) {
+    COURSES.push(course);
+  }
+
+  editCourse(course: CourseModel) {
+    const courseToUpdate = COURSES.find(x => course.id === x.id);
+  }
 }

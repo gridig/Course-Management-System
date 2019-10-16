@@ -10,10 +10,13 @@
     <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
       <a class="nav-link nav-link-sidebar" [routerLink]="['/home']" routerLinkActive="active" role="tab">Home</a>
       <a class="nav-link nav-link-sidebar" [routerLink]="['/courses']" routerLinkActive="active" role="tab">Courses</a>
-      <a class="nav-link nav-link-sidebar" [routerLink]="['/students']" routerLinkActive="active" role="tab">Students</a>
+      <a class="nav-link nav-link-sidebar" [routerLink]="['/students']" routerLinkActive="active"
+        role="tab">Students</a>
     </div>
   </div>
   <div class="main-content">
-    <router-outlet></router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

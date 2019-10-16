@@ -1,21 +1,25 @@
-<div class="modal-header">
-    <h4 class="modal-title pull-left">{{title}}</h4>
-    <!--
-    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    -->
+<div *ngIf="courseForm">
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">{{title}}</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="courseForm">
+            <div class="input-group mb-3">
+                <input type="text" placeholder="Course Name" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" name="name" formControlName="name">
+            </div>
+            <div class="input-group mb-3">
+                <textarea placeholder="Course Description" class="form-control" aria-label="Default" name="Description"
+                    formControlName="description">
+            </textarea>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" [disabled]="" class="btn btn-primary" (click)="confirm(courseForm.value)">{{title}}</button>
+        <button type="submit" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+    </div>
 </div>
-<div class="modal-body">
-    <form *ngIf="bsModalRef?.content?.name">
-        <div class="input-group mb-3">
-            <input type="text" name="name" placeholder="Course Name" class="form-control" aria-label="Default"
-                aria-describedby="inputGroup-sizing-default" [(ngModel)]="bsModalRef.content.name">
-        </div>
-    </form>
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
-</div>
-
-<!-- course.name ubaciti -->
