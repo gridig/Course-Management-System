@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row mb-3 justify-content-end" >
+  <div class="row mb-3 justify-content-end">
     <div class="col-2">
-      <button class="btn btn-outline-primary" (click)="addStudent()">Add New</button>
+      <button class="btn btn-outline-primary" (click)="addTeacher()">Add New</button>
     </div>
   </div>
   <div class="row">
@@ -10,16 +10,16 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Name</th>
+            <th scope="col">Teacher's name</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let student of students">
-            <td>{{student.id}}</td>
-            <td>{{student.firstName}} {{student.lastName}}</td>
+          <tr *ngFor="let teacher of teachers">
+            <td>{{teacher.id}}</td>
+            <td>{{teacher.firstName}} {{teacher.lastName}}</td>
             <td>
-              <button (click)=editStudent(student) type="button" class="btn btn-outline-info btn-sm">
+              <button (click)=editTeacher(teacher) type="button" class="btn btn-outline-info btn-sm">
                 Edit
               </button>
             </td>

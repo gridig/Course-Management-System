@@ -1,0 +1,24 @@
+<div *ngIf="teacherForm">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{title}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="teacherForm">
+      <div class="input-group mb-3">
+        <input type="text" placeholder="First name" class="form-control" name="firstName" formControlName="firstName">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Last name" class="form-control" name="lastName" formControlName="lastName">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary" [disabled]="!teacherForm.valid"
+      (click)="confirm(teacherForm.value)">{{title}}</button>
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+  </div>
+</div>

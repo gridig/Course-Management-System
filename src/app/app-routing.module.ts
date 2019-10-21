@@ -5,6 +5,7 @@ import { CourseListComponent } from './course/course-list/course-list.component'
 import { Page404Component } from './page404/page404.component';
 import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
+import { TeacherListComponent } from './teacher/teacher-list/teacher-list.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'students',
         component: StudentListComponent
+      },
+      {
+        path: 'teachers',
+        component: TeacherListComponent
       }
     ]
   },

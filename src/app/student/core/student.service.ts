@@ -31,4 +31,13 @@ export class StudentService {
   getStudents(): StudentModel[] {
     return STUDENTS;
   }
+
+  createStudent(student: StudentModel) {
+    STUDENTS.push(student);
+  }
+
+  editStudent(student: StudentModel) {
+    // TODO handle edit
+  }
+
 }

@@ -7,19 +7,21 @@
     </div>
     <div class="modal-body">
         <form [formGroup]="courseForm">
+
             <div class="input-group mb-3">
-                <input type="text" placeholder="Course Name" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default" name="name" formControlName="name">
+                <input type="text" placeholder="Course name" class="form-control" name="name" formControlName="name">
             </div>
+
             <div class="input-group mb-3">
-                <textarea placeholder="Course Description" class="form-control" aria-label="Default" name="Description"
-                    formControlName="description">
-            </textarea>
+                <textarea type="text" placeholder="Course description" class="form-control" name="description"
+                    formControlName="description"></textarea>
             </div>
+
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" [disabled]="" class="btn btn-primary" (click)="confirm(courseForm.value)">{{title}}</button>
-        <button type="submit" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!courseForm.valid"
+            (click)="confirm(courseForm.value)">{{title}}</button>
+        <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
     </div>
 </div>

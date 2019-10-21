@@ -10,6 +10,7 @@ import { compileBaseDefFromMetadata } from '@angular/compiler';
 export class CourseCardComponent implements OnInit {
 
   @Input() course: CourseModel;
+
   constructor() { }
 
   ngOnInit() {

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseService } from './core/course.service';
@@ -20,9 +21,13 @@ import { CourseModalComponent } from './course-modal/course-modal.component';
     ButtonsModule,
     ModalModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgSelectModule
   ],
-  providers: [CourseService],
+  providers: [
+    CourseService,
+    BsModalService
+  ],
   exports: [
     CourseCardComponent
   ],
@@ -31,3 +36,5 @@ import { CourseModalComponent } from './course-modal/course-modal.component';
   ]
 })
 export class CourseModule { }
+
+

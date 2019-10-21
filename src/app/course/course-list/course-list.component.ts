@@ -25,7 +25,7 @@ export class CourseListComponent implements OnInit {
   }
 
   editCourse(course: CourseModel) {
-    this.bsModalRef = this.modalService.show(CourseModalComponent, { initialState: {course} });
+    this.bsModalRef = this.modalService.show(CourseModalComponent, { initialState: { course } });
     this.bsModalRef.content.closeBtnName = 'Close';
     this.bsModalRef.content.title = 'Edit Course';
   }
@@ -35,5 +35,5 @@ export class CourseListComponent implements OnInit {
     this.bsModalRef.content.closeBtnName = 'Close';
     this.bsModalRef.content.title = 'Add Course';
   }
-}
 
+}

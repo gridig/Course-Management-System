@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 
-import { StudentListComponent } from './student-list/student-list.component';
-import { StudentService } from './core/student.service';
-import { StudentModalComponent } from './student-modal/student-modal.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TeacherService } from './core/teacher.service';
+import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { TeacherModalComponent } from './teacher-modal/teacher-modal.component';
 
 
 @NgModule({
   declarations: [
-    StudentListComponent,
-    StudentModalComponent
+    TeacherListComponent,
+    TeacherModalComponent
   ],
   imports: [
     CommonModule,
@@ -22,11 +22,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    StudentService,
+    TeacherService,
     BsModalService
   ],
   entryComponents: [
-    StudentModalComponent
+    TeacherModalComponent
   ]
 })
-export class StudentModule { }
+export class TeacherModule { }
