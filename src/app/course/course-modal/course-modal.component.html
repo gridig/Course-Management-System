@@ -1,27 +1,61 @@
 <div *ngIf="courseForm">
-    <div class="modal-header">
-        <h4 class="modal-title pull-left">{{title}}</h4>
-        <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        <form [formGroup]="courseForm">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{title}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="courseForm">
 
-            <div class="input-group mb-3">
-                <input type="text" placeholder="Course name" class="form-control" name="name" formControlName="name">
-            </div>
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Course name" class="form-control" name="name" formControlName="name">
+      </div>
 
-            <div class="input-group mb-3">
-                <textarea type="text" placeholder="Course description" class="form-control" name="description"
-                    formControlName="description"></textarea>
-            </div>
+      <div class="input-group mb-3">
+        <textarea type="text" placeholder="Course description" class="form-control" name="description"
+          formControlName="description"></textarea>
+      </div>
 
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button type="submit" class="btn btn-primary" [disabled]="!courseForm.valid"
-            (click)="confirm(courseForm.value)">{{title}}</button>
-        <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
-    </div>
+        <div class="input-group mb-3">
+          <ng-select #agesSelect 
+          [items]="teachers" 
+          bindLabel="fullName"
+          bindValue="id" 
+          [selectOnTab]="true" 
+          placeholder="Select teacher"
+          formControlName="teacherId">
+          </ng-select>
+        </div>
+
+        <div class="input-group mb-3">
+          <ng-select #agesSelect 
+          [items]="students" 
+          bindLabel="firstName"
+          bindValue="id" 
+          [selectOnTab]="true" 
+          placeholder="Select student" 
+          formControlName="studentIds"
+          [closeOnSelect]="false"
+          [multiple]="true">
+          </ng-select>
+        </div>
+
+        <div class="input-group mb-3">
+            <input type="text"
+            placeholder="Course date"
+            class="form-control"
+            formControlName="date"
+            [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+            bsDatepicker> 
+        </div>
+
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary" [disabled]="!courseForm.valid"
+      (click)="confirm(courseForm.value)">{{title}}</button>
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+  </div>
 </div>
