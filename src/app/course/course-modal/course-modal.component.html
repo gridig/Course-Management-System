@@ -17,38 +17,28 @@
           formControlName="description"></textarea>
       </div>
 
-        <div class="input-group mb-3">
-          <ng-select #agesSelect 
-          [items]="teachers" 
-          bindLabel="firstName"
-          bindValue="id" 
-          [selectOnTab]="true" 
-          placeholder="Select teacher"
+      <div class="input-group mb-3">
+        <ng-select #agesSelect [items]="teachers" bindValue="id" [selectOnTab]="true" placeholder="Select teacher"
           formControlName="teacherId">
-          </ng-select>
-        </div>
+          <ng-template ng-label-tmp ng-option-tmp let-item="item">
+            {{item.firstName}} {{item.lastName}}
+          </ng-template>
+        </ng-select>
+      </div>
 
-        <div class="input-group mb-3">
-          <ng-select #agesSelect 
-          [items]="students" 
-          bindLabel="firstName"
-          bindValue="id" 
-          [selectOnTab]="true" 
-          placeholder="Select student" 
-          formControlName="studentIds"
-          [closeOnSelect]="false"
-          [multiple]="true">
-          </ng-select>
-        </div>
+      <div class="input-group mb-3">
+        <ng-select #agesSelect [items]="students" bindValue="id" [selectOnTab]="true" placeholder="Select student"
+          formControlName="studentIds" [closeOnSelect]="false" [multiple]="true">
+          <ng-template ng-label-tmp ng-option-tmp let-item="item">
+            {{item.firstName}} {{item.lastName}}
+          </ng-template>
+        </ng-select>
+      </div>
 
-        <div class="input-group mb-3">
-            <input type="text"
-            placeholder="Course date"
-            class="form-control"
-            formControlName="date"
-            [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
-            bsDatepicker> 
-        </div>
+      <div class="input-group mb-3">
+        <input type="text" placeholder="Course date" class="form-control" formControlName="date"
+          [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" bsDatepicker>
+      </div>
 
 
     </form>
