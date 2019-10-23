@@ -18,6 +18,7 @@ import { TeacherModule } from './teacher/teacher.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HomeModule,

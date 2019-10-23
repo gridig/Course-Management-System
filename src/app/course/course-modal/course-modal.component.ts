@@ -44,8 +44,15 @@ export class CourseModalComponent implements OnInit {
   }
 
   confirm(value: CourseModel) {
-    const { createCourse, editCourse } = this.courseService;
-    this.course.id ? editCourse(value) : createCourse(value);
+    this.course.id ?
+    this.courseService.editCourse(this.course.id, value).subscribe(      
+      result => console.log('SUCCESS', result),
+      err => console.log("ACHTUNG, EDIT ERROR", err)
+    ) :
+    this.courseService.createCourse(value).subscribe(
+      result => console.log(result),
+      err => console.log("ACHTUNG, CREATE ERROR", err)
+    );
   }
 
   private createCourseForm() {

@@ -21,7 +21,8 @@ export class CourseListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.courses = this.courseService.getCourses();
+    this.courseService.getCourses().subscribe(
+      (courses: CourseModel[]) => this.courses = courses);
   }
 
   editCourse(course: CourseModel) {
@@ -30,6 +31,13 @@ export class CourseListComponent implements OnInit {
 
   addCourse() {
     this.openModal();
+  }
+
+  delete(id: number) {
+    this.courseService.deleteCourse(id).subscribe(
+      result => console.log('SUCSESS', result),
+      err => console.log('ERR', err)
+    )
   }
 
   private openModal(course?: CourseModel) {    
