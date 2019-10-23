@@ -7,6 +7,7 @@ import { CourseService } from 'src/app/course/core/course.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
 
   courses: CourseModel[];
