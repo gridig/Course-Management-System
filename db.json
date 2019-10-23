@@ -1,0 +1,291 @@
+{
+  "courses": [
+    {
+      "name": "English Course",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. ",
+      "location": "Sarajevo",
+      "address": "",
+      "state": "",
+      "startDate": "2018-04-03T21:43:13.000Z",
+      "endDate": "2018-04-20T21:43:13.000Z",
+      "teacherId": 1,
+      "studentsIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "id": 2
+    },
+    {
+      "name": "AngularJS Course",
+      "description": "Test description. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "location": "Sarajevo",
+      "address": "",
+      "state": "",
+      "startDate": null,
+      "endDate": "2018-04-20T18:47:42.000Z",
+      "teacherId": 2,
+      "studentsIds": [
+        2,
+        1
+      ],
+      "id": 3
+    },
+    {
+      "name": "Russian Course",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. ",
+      "location": "Zagreb",
+      "address": "",
+      "state": "",
+      "startDate": "2018-04-03T21:43:13.000Z",
+      "endDate": "2018-04-20T21:43:13.000Z",
+      "teacherId": null,
+      "studentsIds": null,
+      "id": 4
+    },
+    {
+      "name": "PHP Course",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "location": "Beograd",
+      "address": "",
+      "state": "",
+      "startDate": "2018-04-03T21:43:13.000Z",
+      "endDate": "2018-04-20T21:43:13.000Z",
+      "teacherId": null,
+      "studentsIds": null,
+      "id": 5
+    },
+    {
+      "name": "C# Course",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "location": "Sarajevo",
+      "address": "",
+      "state": "",
+      "startDate": "2018-04-03T21:43:13.000Z",
+      "endDate": "2018-04-20T21:43:13.000Z",
+      "teacherId": null,
+      "studentsIds": null,
+      "id": 6
+    },
+    {
+      "name": "Python Course",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "location": "Tuzla",
+      "address": "",
+      "state": "",
+      "startDate": "2018-04-03T21:43:13.000Z",
+      "endDate": "2018-04-20T21:43:13.000Z",
+      "teacherId": null,
+      "studentsIds": null,
+      "id": 7
+    },
+    {
+      "name": "French Course",
+      "description": "It is a long established fact that a reader will be distracted by t",
+      "location": "Las Vegas",
+      "address": "",
+      "state": "",
+      "startDate": null,
+      "endDate": "2018-04-24T22:00:00.000Z",
+      "teacherId": null,
+      "studentsIds": null,
+      "id": 8
+    },
+    {
+      "name": "English Course",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. ",
+      "location": "Sarajevo",
+      "address": "Neki address",
+      "state": "BiH",
+      "startDate": "2018-04-03T21:43:13.000Z",
+      "endDate": "2018-04-20T21:43:13.000Z",
+      "id": 9
+    }
+  ],
+  "students": [
+    {
+      "firstName": "Herta",
+      "lastName": "Riatt",
+      "email": "hriatt0@nature.com",
+      "gender": "Female",
+      "phone_number": "748-867-9240",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Alec",
+      "lastName": "Greswell",
+      "email": "agreswell1@livejournal.com",
+      "gender": "Male",
+      "phone_number": "386-795-7861"
+    },
+    {
+      "id": 3,
+      "firstName": "Klarika",
+      "lastName": "Jobke",
+      "email": "kjobke2@fda.gov",
+      "gender": "Female",
+      "phone_number": "370-126-1669"
+    },
+    {
+      "id": 4,
+      "firstName": "Sheeree",
+      "lastName": "Proudlock",
+      "email": "sproudlock3@psu.edu",
+      "gender": "Female",
+      "phone_number": "800-877-8769"
+    },
+    {
+      "id": 5,
+      "firstName": "Bordie",
+      "lastName": "Bellringer",
+      "email": "bbellringer4@123-reg.co.uk",
+      "gender": "Male",
+      "phone_number": "110-172-2161"
+    },
+    {
+      "id": 6,
+      "firstName": "Barby",
+      "lastName": "Oxton",
+      "email": "boxton5@godaddy.com",
+      "gender": "Female",
+      "phone_number": "842-864-2284"
+    },
+    {
+      "id": 7,
+      "firstName": "Joyan",
+      "lastName": "Giddens",
+      "email": "jgiddens6@elegantthemes.com",
+      "gender": "Female",
+      "phone_number": "202-753-7352"
+    },
+    {
+      "id": 8,
+      "firstName": "Noe",
+      "lastName": "Kelston",
+      "email": "nkelston7@usgs.gov",
+      "gender": "Male",
+      "phone_number": "477-417-3433"
+    },
+    {
+      "id": 9,
+      "firstName": "Antoni",
+      "lastName": "Vitler",
+      "email": "avitler8@ask.com",
+      "gender": "Male",
+      "phone_number": "693-134-9141"
+    },
+    {
+      "id": 10,
+      "firstName": "Jed",
+      "lastName": "Vincent",
+      "email": "jvincent9@usgs.gov",
+      "gender": "Male",
+      "phone_number": "856-821-7697"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "firstName": "Cleo",
+      "lastName": "Vany",
+      "email": "cvany0@bing.com",
+      "gender": "Female",
+      "phone_number": "111-954-6148",
+      "website": "flickr.com",
+      "company": "Tagcat"
+    },
+    {
+      "id": 2,
+      "firstName": "Haley",
+      "lastName": "Keems",
+      "email": "hkeems1@ed.gov",
+      "gender": "Female",
+      "phone_number": "772-507-4133",
+      "website": "icio.us",
+      "company": "Dabvine"
+    },
+    {
+      "id": 3,
+      "firstName": "Rolph",
+      "lastName": "Esplin",
+      "email": "resplin2@oakley.com",
+      "gender": "Male",
+      "phone_number": "420-382-7641",
+      "website": "earthlink.net",
+      "company": "Devbug"
+    },
+    {
+      "id": 4,
+      "firstName": "Prissie",
+      "lastName": "M'Quhan",
+      "email": "pmquhan3@pagesperso-orange.fr",
+      "gender": "Female",
+      "phone_number": "733-869-0541",
+      "website": "yale.edu",
+      "company": "DabZ"
+    },
+    {
+      "id": 5,
+      "firstName": "Waverley",
+      "lastName": "Kapelhof",
+      "email": "wkapelhof4@salon.com",
+      "gender": "Male",
+      "phone_number": "546-329-5220",
+      "website": "godaddy.com",
+      "company": "Kwilith"
+    },
+    {
+      "id": 6,
+      "firstName": "Anastassia",
+      "lastName": "Laird-Craig",
+      "email": "alairdcraig5@state.gov",
+      "gender": "Female",
+      "phone_number": "944-455-9912",
+      "website": "dedecms.com",
+      "company": "Jetwire"
+    },
+    {
+      "id": 7,
+      "firstName": "Meara",
+      "lastName": "Lorente",
+      "email": "mlorente6@smugmug.com",
+      "gender": "Female",
+      "phone_number": "879-875-8556",
+      "website": "newsvine.com",
+      "company": "Cogilith"
+    },
+    {
+      "id": 8,
+      "firstName": "Clifford",
+      "lastName": "Masding",
+      "email": "cmasding7@miitbeian.gov.cn",
+      "gender": "Male",
+      "phone_number": "703-172-7463",
+      "website": "usnews.com",
+      "company": "Yabox"
+    },
+    {
+      "id": 9,
+      "firstName": "Bondy",
+      "lastName": "Winridge",
+      "email": "bwinridge8@51.la",
+      "gender": "Male",
+      "phone_number": "694-634-0725",
+      "website": "ibm.com",
+      "company": "Flashpoint"
+    },
+    {
+      "id": 10,
+      "firstName": "Clare",
+      "lastName": "Newcome",
+      "email": "cnewcome9@imageshack.us",
+      "gender": "Female",
+      "phone_number": "829-505-9157",
+      "website": "yandex.ru",
+      "company": "Feednation"
+    }
+  ]
+}
