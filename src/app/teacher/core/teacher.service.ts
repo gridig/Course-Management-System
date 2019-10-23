@@ -3,9 +3,6 @@ import { TeacherModel } from './teacher.model';
 
 const TEACHERS = [
   {
-    fullName: '',
-  },
-  {
     id: 1,
     firstName: 'Mark',
     lastName: 'Hughes',
@@ -25,7 +22,7 @@ const TEACHERS = [
     firstName: 'Britney',
     lastName: 'Smith',
   },
-].map((i) => { i.fullName = i.firstName + ' ' + i.lastName; return i; });
+];
 
 @Injectable({
   providedIn: 'root'
