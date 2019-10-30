@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { CourseModel } from 'src/app/course/core/course.model';
 import { CourseService } from 'src/app/course/core/course.service';
 
@@ -7,7 +8,6 @@ import { CourseService } from 'src/app/course/core/course.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-
 export class HomeComponent implements OnInit {
 
   courses: CourseModel[];
@@ -17,6 +17,6 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.courses = this.courseService.getCourses();
+    this.courseService.getCourses().subscribe((result: CourseModel[]) => this.courses = result);
   }
 }

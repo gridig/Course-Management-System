@@ -10,7 +10,7 @@ import { TeacherModalComponent } from '../teacher-modal/teacher-modal.component'
   styleUrls: ['./teacher-list.component.css']
 })
 export class TeacherListComponent implements OnInit {
-
+title = 'Teachers';
   teachers: TeacherModel[];
   bsModalRef: BsModalRef;
 
@@ -20,18 +20,27 @@ export class TeacherListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.teachers = this.teacherService.getTeachers();
+    this.teacherService.getTeachers().subscribe((result: TeacherModel[]) => this.teachers = result);
   }
 
   editTeacher(teacher: TeacherModel) {
-    this.bsModalRef = this.modalService.show(TeacherModalComponent, { initialState: { teacher } });
-    this.bsModalRef.content.closeBtnName = 'Close';
-    this.bsModalRef.content.title = 'Edit Teacher';
+    this.openModal(teacher);
   }
 
   addTeacher() {
-    this.bsModalRef = this.modalService.show(TeacherModalComponent);
+    this.openModal();
+  }
+
+  delete(id: number) {
+    this.teacherService.deleteTeacher(id).subscribe(
+      result => console.log('Success', result),
+      err => console.log('Error', err)
+    );
+  }
+
+  private openModal(teacher?: TeacherModel) {
+    this.bsModalRef = this.modalService.show(TeacherModalComponent, { initialState: { teacher } });
     this.bsModalRef.content.closeBtnName = 'Close';
-    this.bsModalRef.content.title = 'Add Teacher';
+    this.bsModalRef.content.title = teacher ? 'Edit Teacher' : 'Add Teacher';
   }
 }

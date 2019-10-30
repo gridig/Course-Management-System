@@ -1,46 +1,35 @@
 import { Injectable } from '@angular/core';
-import { TeacherModel } from './teacher.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-const TEACHERS = [
-  {
-    id: 1,
-    firstName: 'Mark',
-    lastName: 'Hughes',
-  },
-  {
-    id: 2,
-    firstName: 'John',
-    lastName: 'Lawrence',
-  },
-  {
-    id: 3,
-    firstName: 'Will',
-    lastName: 'Jones',
-  },
-  {
-    id: 4,
-    firstName: 'Britney',
-    lastName: 'Smith',
-  },
-];
+import { environment } from 'src/environments/environment';
+import { TeacherModel } from './teacher.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeacherService {
 
-  constructor() { }
-
-  getTeachers(): TeacherModel[] {
-    return TEACHERS;
+  url: string;
+  constructor(
+    private http: HttpClient
+  ) {
+    this.url = `${environment.API_URL}teachers`;
   }
 
-  createTeacher(teacher: TeacherModel) {
-    TEACHERS.push(teacher);
+  getTeachers(): Observable<any> {
+    return this.http.get(this.url);
   }
 
-  editTeacher(teacher: TeacherModel) {
-    // TODO: Handle edit
+  createTeacher(teacher: TeacherModel): Observable<any> {
+    return this.http.post(this.url, teacher);
+  }
+
+  editTeacher(id: number, teacher: TeacherModel): Observable<any> {
+    return this.http.put(`${this.url}/${id}`, teacher);
+  }
+  deleteTeacher(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);
   }
 
 }

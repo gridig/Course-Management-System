@@ -1,18 +1,12 @@
 <div class="container">
-
-  <div class="row mb-3 justify-content-end" >
-    <div class="col-2">
-      <button class="btn btn-outline-primary" (click)="addCourse()">Add New</button>
-    </div>
-  </div>
-
+<cm-header [title]= "title" (addClicked)="addCourse()"></cm-header>
   <div class="row">
     <div class="col">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Course name</th>
+            <th scope="col">Name</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -21,12 +15,12 @@
             <td>{{course.id}}</td>
             <td>{{course.name}}</td>
             <td>
-                <button (click)=editCourse(course) type="button" class="btn btn-outline-info btn-sm">
-                  Edit
-                </button>
-                <button (click)=delete(course.id) type="button" class="btn btn-outline-danger btn-sm ml-2">
-                  Delete
-                </button>
+              <button (click)=editCourse(course) type="button" class="btn btn-outline-info btn-sm">
+                Edit
+              </button>
+              <button (click)=delete(course.id) type="button" class="btn btn-outline-danger btn-sm ml-2">
+                Delete
+              </button>
             </td>
           </tr>
         </tbody>

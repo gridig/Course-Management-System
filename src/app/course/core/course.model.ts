@@ -1,8 +1,12 @@
 export class CourseModel {
   id: number;
   name: string;
-  description: string;
   teacherId: number;
+  startDate: string;
+  endDate: string;
+  location: string;
+  address: string;
+  state: string;
   studentIds?: number[];
-  date: string;
+  description?: string;
 }

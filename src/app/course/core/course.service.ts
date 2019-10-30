@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
 import { CourseModel } from './course.model';
+
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -15,21 +15,22 @@ export class CourseService {
     private http: HttpClient
   ) {
     this.url = `${environment.API_URL}courses`;
-   }
-
-  getCourses(): Observable<any> {
-    return this.http.get('');
   }
 
-  createCourse(course: CourseModel) {
+  getCourses(): Observable<any> {
+    return this.http.get(this.url);
+  }
+
+  createCourse(course: CourseModel): Observable<any> {
     return this.http.post(this.url, course);
   }
 
-  editCourse(id: number, course: CourseModel) {
+  editCourse(id: number, course: CourseModel): Observable<any> {
     return this.http.put(`${this.url}/${id}`, course);
   }
 
-  deleteCourse(id: number) {
+  deleteCourse(id: number): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
   }
+
 }

@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseService } from './core/course.service';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseModalComponent } from './course-modal/course-modal.component';
-import { NgSelectModule } from '@ng-select/ng-select';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     ReactiveFormsModule,
     NgSelectModule,
     BsDatepickerModule.forRoot(),
+    SharedModule
   ],
   providers: [
     CourseService,

@@ -12,23 +12,40 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class StudentModalComponent implements OnInit {
   student: StudentModel;
   studentForm: FormGroup;
+  radioGroupForm: FormGroup;
 
   constructor(
     public bsModalRef: BsModalRef,
-    private studentService: StudentService) { }
+    private studentService: StudentService
+  ) { }
 
   ngOnInit() {
     setTimeout(() => {
       this.student = this.bsModalRef.content.student || new StudentModel();
-      this.studentForm = new FormGroup({
-        firstName: new FormControl(this.student.firstName, Validators.required),
-        lastName: new FormControl(this.student.lastName, Validators.required)
-      });
+      this.createStudentForm();
     });
   }
+
   confirm(value: StudentModel) {
-    const { createStudent, editStudent } = this.studentService;
-    this.student.id ? editStudent(value) : createStudent(value);
+    this.student.id ?
+      this.studentService.editStudent(this.student.id, value).subscribe(
+        result => console.log('SUCCESS', result),
+        err => console.log('ERROR', err)
+      ) :
+      this.studentService.createStudent(value).subscribe(
+        result => console.log('SUCCESS', result),
+        err => console.log('ERROR', err)
+      );
+  }
+
+  private createStudentForm() {
+    this.studentForm = new FormGroup({
+      firstName: new FormControl(this.student.firstName, Validators.required),
+      lastName: new FormControl(this.student.lastName, Validators.required),
+      email: new FormControl(this.student.email),
+      gender: new FormControl(this.student.gender),
+      phoneNumber: new FormControl(this.student.phoneNumber)
+    });
   }
 
 }

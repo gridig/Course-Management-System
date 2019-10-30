@@ -11,7 +11,7 @@ import { CourseModalComponent } from '../course-modal/course-modal.component';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
-
+  title = 'Courses';
   courses: CourseModel[];
   bsModalRef: BsModalRef;
 
@@ -21,8 +21,7 @@ export class CourseListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.courseService.getCourses().subscribe(
-      (courses: CourseModel[]) => this.courses = courses);
+    this.courseService.getCourses().subscribe((courses: CourseModel[]) => this.courses = courses);
   }
 
   editCourse(course: CourseModel) {
@@ -35,15 +34,15 @@ export class CourseListComponent implements OnInit {
 
   delete(id: number) {
     this.courseService.deleteCourse(id).subscribe(
-      result => console.log('SUCSESS', result),
+      result => console.log('SUCCESS', result),
       err => console.log('ERR', err)
-    )
+    );
   }
 
-  private openModal(course?: CourseModel) {    
-    this.bsModalRef = this.modalService.show(CourseModalComponent, {initialState: {course}});
+  private openModal(course?: CourseModel) {
+    this.bsModalRef = this.modalService.show(CourseModalComponent, { initialState: { course } });
     this.bsModalRef.content.closeBtnName = 'Close';
-    this.bsModalRef.content.title = course ? 'Edit course' : 'Add course';
+    this.bsModalRef.content.title = course ? 'Edit Course' : 'Add Course';
   }
 
 }

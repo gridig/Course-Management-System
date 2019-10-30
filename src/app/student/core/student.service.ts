@@ -1,43 +1,36 @@
 import { Injectable } from '@angular/core';
-import { StudentModel } from './student.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-const STUDENTS = [
-  {
-    id: 1,
-    firstName: 'Herta',
-    lastName: 'Riatt',
-  },
-  {
-    id: 2,
-    firstName: 'Alec',
-    lastName: 'Greswell',
-  },
-  {
-    id: 3,
-    firstName: 'Klarika',
-    lastName: 'Jobke',
-  },
-  {
-    id: 4,
-    firstName: 'Sheeree',
-    lastName: 'Proudlock',
-  },
-];
+import { StudentModel } from './student.model';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable()
 
 export class StudentService {
 
-  getStudents(): StudentModel[] {
-    return STUDENTS;
+  url: string;
+
+  constructor(
+    private http: HttpClient
+  ) {
+    this.url = `${environment.API_URL}students`;
   }
 
-  createStudent(student: StudentModel) {
-    STUDENTS.push(student);
+  getStudents(): Observable<any> {
+    return this.http.get(this.url);
   }
 
-  editStudent(student: StudentModel) {
-    // TODO handle edit
+  createStudent(student: StudentModel): Observable<any> {
+    return this.http.post(this.url, student);
+  }
+
+  editStudent(id: number, student: StudentModel): Observable<any> {
+    return this.http.put(`${this.url}/${id}`, student);
+  }
+  deleteStudent(id: number): Observable<any> {
+    return this.http.delete(`${this.url}/${id}`);
   }
 
 }

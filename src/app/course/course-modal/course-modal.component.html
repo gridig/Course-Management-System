@@ -6,40 +6,81 @@
     </button>
   </div>
   <div class="modal-body">
-    <form [formGroup]="courseForm">
-
+    <form [formGroup]="courseForm" novalidate>
+      
       <div class="input-group mb-3">
-        <input type="text" placeholder="Course name" class="form-control" name="name" formControlName="name">
+        <input 
+        [ngClass]="{ 'is-invalid': nameField.touched && nameField.errors }"
+        type="text" placeholder="Course name" class="form-control" name="name" formControlName="name">
+<!--           <div *ngIf="courseForm.get('name').touched && courseForm.get('name').errors.required">
+            Name is required
+          </div> -->
+          <div *ngIf="nameField.errors" class="invalid-feedback">
+            <div *ngIf="nameField.hasError('required')">Name is required</div>
+            <div *ngIf="nameField.hasError('minlength')">Must have at least 6 characters</div>
+          </div>
       </div>
 
       <div class="input-group mb-3">
-        <textarea type="text" placeholder="Course description" class="form-control" name="description"
-          formControlName="description"></textarea>
+        <input type="text" placeholder="Location" class="form-control" formControlName="location">
       </div>
 
       <div class="input-group mb-3">
-        <ng-select #agesSelect [items]="teachers" bindValue="id" [selectOnTab]="true" placeholder="Select teacher"
-          formControlName="teacherId">
-          <ng-template ng-label-tmp ng-option-tmp let-item="item">
-            {{item.firstName}} {{item.lastName}}
-          </ng-template>
+        <input type="text" placeholder="Address" class="form-control" formControlName="address">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" placeholder="State" class="form-control" formControlName="state">
+      </div>
+
+      <div class="input-group mb-3">
+
+      <ng-select [items]="teachers"
+                  [selectOnTab]="true"
+                  placeholder="Select teacher"
+                  bindValue="id"
+                  formControlName="teacherId">
+                  <ng-template ng-label-tmp ng-option-tmp let-item="item">
+                    {{item.firstName}} {{item.lastName}}
+                </ng-template>
+        </ng-select>
+      </div>
+      <div class="input-group mb-3">
+
+        <ng-select  
+                  [multiple]="true"
+                  [items]="students"
+                  [selectOnTab]="true"
+                  bindValue="id"
+                  placeholder="Select student"
+                  formControlName="studentIds">
+                  <ng-template ng-label-tmp ng-option-tmp let-item="item">
+                    {{item.firstName}} {{item.lastName}}
+                </ng-template>
         </ng-select>
       </div>
 
       <div class="input-group mb-3">
-        <ng-select #agesSelect [items]="students" bindValue="id" [selectOnTab]="true" placeholder="Select student"
-          formControlName="studentIds" [closeOnSelect]="false" [multiple]="true">
-          <ng-template ng-label-tmp ng-option-tmp let-item="item">
-            {{item.firstName}} {{item.lastName}}
-          </ng-template>
-        </ng-select>
+        <input type="text"
+           placeholder="Start date"
+           class="form-control"
+           formControlName="startDate"
+           value="{{ courseForm.get('startDate').value | date }}"
+           bsDatepicker>
       </div>
 
       <div class="input-group mb-3">
-        <input type="text" placeholder="Course date" class="form-control" formControlName="date"
-          [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }" bsDatepicker>
-      </div>
+          <input type="text"
+             placeholder="End date"
+             class="form-control"
+             formControlName="endDate"
+             bsDatepicker>
+        </div>
 
+      <div class="input-group mb-3">
+          <textarea type="text" placeholder="Course description" class="form-control" name="description"
+            formControlName="description"></textarea>
+        </div>
     </form>
   </div>
   <div class="modal-footer">

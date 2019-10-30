@@ -11,7 +11,7 @@ import { StudentModalComponent } from '../student-modal/student-modal.component'
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
-
+  title = 'Student';
   students: StudentModel[];
   bsModalRef: BsModalRef;
 
@@ -21,17 +21,28 @@ export class StudentListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.students = this.studentService.getStudents();
+    this.studentService.getStudents().subscribe((result: StudentModel[]) => this.students = result);
   }
+
   editStudent(student: StudentModel) {
+    this.openModal(student);
+  }
+
+  addStudent() {
+    this.openModal();
+  }
+
+  delete(id: number) {
+    this.studentService.deleteStudent(id).subscribe(
+      result => console.log('SUCCES', result),
+      err => console.log('ERR', err)
+    );
+  }
+
+  private openModal(student?: StudentModel) {
     this.bsModalRef = this.modalService.show(StudentModalComponent, { initialState: { student } });
     this.bsModalRef.content.closeBtnName = 'Close';
-    this.bsModalRef.content.title = 'Edit Student';
-  }
-  addStudent() {
-    this.bsModalRef = this.modalService.show(StudentModalComponent);
-    this.bsModalRef.content.closeBtnName = 'Close';
-    this.bsModalRef.content.title = 'Add Student';
+    this.bsModalRef.content.title = student ? 'Edit Student' : 'Add Student';
   }
 
 }

@@ -8,15 +8,33 @@
   <div class="modal-body">
     <form [formGroup]="studentForm">
       <div class="input-group mb-3">
-        <input type="text" placeholder="First name" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default" name="firstName" formControlName="firstName">
+        <input type="text" placeholder="First name" class="form-control" name="firstName" formControlName="firstName">
       </div>
 
       <div class="input-group mb-3">
-        <input type="text" placeholder="Last name" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-default" name="lastName" formControlName="lastName">
+        <input type="text" placeholder="Last name" class="form-control" name="lastName" formControlName="lastName">
       </div>
+      <div class="input-group mb-3">
+        <input type="email" placeholder="Email" class="form-control" name="email" formControlName="email">
+      </div>
+      <div class="group-gap">
 
+
+        <div class="custom-control custom-radio">
+          <input id="male" type="radio" class="custom-control-input" value="male" name="gender"
+            formControlName="gender">
+          <label class="custom-control-label" for="male">Male</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+          <input id="female" type="radio" class="custom-control-input" value="female" name="gender"
+            formControlName="gender">
+          <label class="custom-control-label" for="female">Female</label>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" placeholder="phone number" class="form-control" formControlName="phoneNumber">
+      </div>
     </form>
   </div>
   <div class="modal-footer">

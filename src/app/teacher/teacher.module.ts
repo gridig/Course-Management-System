@@ -7,6 +7,7 @@ import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 import { TeacherService } from './core/teacher.service';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { TeacherModalComponent } from './teacher-modal/teacher-modal.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { TeacherModalComponent } from './teacher-modal/teacher-modal.component';
     ButtonsModule,
     ModalModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [
     TeacherService,

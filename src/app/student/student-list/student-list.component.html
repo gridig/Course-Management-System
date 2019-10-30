@@ -1,8 +1,9 @@
 <div class="container">
+    <cm-header [title]= "title" (addClicked)="addStudent()"></cm-header>
   <div class="row mb-3 justify-content-end" >
-    <div class="col-2">
+<!--     <div class="col-2">
       <button class="btn btn-outline-primary" (click)="addStudent()">Add New</button>
-    </div>
+    </div> -->
   </div>
   <div class="row">
     <div class="col">
@@ -21,6 +22,9 @@
             <td>
               <button (click)=editStudent(student) type="button" class="btn btn-outline-info btn-sm">
                 Edit
+              </button>
+              <button (click)=delete(student.id) type="button" class="btn btn-outline-danger btn-sm ml-2">
+                Delete
               </button>
             </td>
           </tr>
