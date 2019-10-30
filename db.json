@@ -286,16 +286,6 @@
       "phone_number": "694-634-0725",
       "website": "ibm.com",
       "company": "Flashpoint"
-    },
-    {
-      "id": 10,
-      "firstName": "Clare",
-      "lastName": "Newcome",
-      "email": "cnewcome9@imageshack.us",
-      "gender": "Female",
-      "phone_number": "829-505-9157",
-      "website": "yandex.ru",
-      "company": "Feednation"
     }
   ]
 }
