@@ -12,6 +12,7 @@ import { HomeModule } from './home/home.module';
 import { Page404Module } from './page404/page404.module';
 import { StudentModule } from './student/student.module';
 import { TeacherModule } from './teacher/teacher.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TeacherModule } from './teacher/teacher.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    CoreModule,
     HomeModule,
     CourseModule,
     Page404Module,

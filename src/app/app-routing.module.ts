@@ -6,6 +6,7 @@ import { Page404Component } from './page404/page404.component';
 import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { TeacherListComponent } from './teacher/teacher-list/teacher-list.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -15,10 +16,11 @@ const routes: Routes = [
   {
     path: '',
     component: FullLayoutComponent,
+    canActivate: [ AuthGuard ],
     children: [
       {
         path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
       },
       {
         path: 'courses',
