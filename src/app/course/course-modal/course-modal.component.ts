@@ -8,6 +8,7 @@ import { TeacherService } from 'src/app/teacher/core/teacher.service';
 import { TeacherModel } from 'src/app/teacher/core/teacher.model';
 import { StudentModel } from 'src/app/student/core/student.model';
 import { StudentService } from 'src/app/student/core/student.service';
+import { AlertService } from 'src/app/shared/alert/alert.service';
 
 @Component({
   selector: 'cm-course-modal',
@@ -24,7 +25,8 @@ export class CourseModalComponent implements OnInit {
     public bsModalRef: BsModalRef,
     private courseService: CourseService,
     private teacherService: TeacherService,
-    private studentService: StudentService
+    private studentService: StudentService,
+    private alert: AlertService
   ) { }
 
   ngOnInit() {
@@ -37,21 +39,24 @@ export class CourseModalComponent implements OnInit {
   }
 
   confirm(value: CourseModel) {
-    this.course.id ?
+    this.course.id ? this.updateCourse(value) : this.addCourse(value);
+  }
 
-    this.courseService.editCourse(this.course.id, value).subscribe(
-      result => console.log('SUCCESS', result),
-      err => console.log('Error', err)
-    ) :
-
+  private addCourse(value: CourseModel) {
     this.courseService.createCourse(value).subscribe(
-      result => console.log(result),
-      err => console.log('Error', err)
-      );
+      result => this.alert.success('Course created'),
+      err => this.alert.error('Unexpected error while creating')
+    );
+  }
+
+  private updateCourse(value: CourseModel) {
+    this.courseService.editCourse(this.course.id, value).subscribe(
+      result => this.alert.success('Course updated'),
+      err => this.alert.error('Unexpected error while editing')
+    )
   }
 
   get nameField(): AbstractControl {
-    console.log(this.courseForm.get('name'));
     return this.courseForm.get('name');
   }
 

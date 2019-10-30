@@ -7,8 +7,11 @@ import { FullLayoutComponent } from './layout/full-layout/full-layout.component'
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { TeacherListComponent } from './teacher/teacher-list/teacher-list.component';
 
-
 const routes: Routes = [
+  {
+    path: 'auth',
+    loadChildren: './auth/auth.module#AuthModule'
+  },
   {
     path: '',
     component: FullLayoutComponent,
@@ -35,7 +38,7 @@ const routes: Routes = [
     path: '**',
     component: Page404Component
   }
-  ];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

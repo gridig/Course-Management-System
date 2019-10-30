@@ -4,6 +4,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { CourseService } from '../core/course.service';
 import { CourseModel } from '../core/course.model';
 import { CourseModalComponent } from '../course-modal/course-modal.component';
+import { AlertService } from 'src/app/shared/alert/alert.service';
 
 @Component({
   selector: 'cm-course-list',
@@ -17,7 +18,8 @@ export class CourseListComponent implements OnInit {
 
   constructor(
     private courseService: CourseService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private alert: AlertService
   ) { }
 
   ngOnInit() {
@@ -34,8 +36,8 @@ export class CourseListComponent implements OnInit {
 
   delete(id: number) {
     this.courseService.deleteCourse(id).subscribe(
-      result => console.log('SUCCESS', result),
-      err => console.log('ERR', err)
+      result => this.alert.info('Course deleted'),
+      err => this.alert.error('Unexpected error')
     );
   }
 
