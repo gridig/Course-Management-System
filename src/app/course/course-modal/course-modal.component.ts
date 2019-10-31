@@ -15,6 +15,7 @@ import { AlertService } from 'src/app/shared/alert/alert.service';
   templateUrl: './course-modal.component.html',
   styleUrls: ['./course-modal.component.css']
 })
+
 export class CourseModalComponent implements OnInit {
   course: CourseModel;
   courseForm: FormGroup;

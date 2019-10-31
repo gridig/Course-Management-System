@@ -76,17 +76,17 @@
       "id": 8
     },
     {
-      "name": "English Cour",
-      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. ",
-      "teacherId": 2,
+      "name": "new course",
+      "description": "desc",
+      "teacherId": 1,
       "studentIds": [
-        6
+        1
       ],
-      "startDate": "2018-04-03T21:43:13.000Z",
-      "endDate": "2019-10-26T17:07:49.000Z",
-      "location": "Sarajevo",
-      "address": "Neki add",
-      "state": "BiH",
+      "startDate": "2019-10-31T07:55:52.000Z",
+      "endDate": "2019-11-03T23:00:00.000Z",
+      "location": "new location",
+      "address": "add",
+      "state": "sta",
       "id": 9
     }
   ],
