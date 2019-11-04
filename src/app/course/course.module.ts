@@ -11,12 +11,14 @@ import { CourseService } from './core/course.service';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseModalComponent } from './course-modal/course-modal.component';
 import { SharedModule } from '../shared/shared.module';
+import { CourseConfirmModalComponent } from './course-confirm-modal/course-confirm-modal.component';
 
 @NgModule({
   declarations: [
     CourseListComponent,
     CourseCardComponent,
-    CourseModalComponent
+    CourseModalComponent,
+    CourseConfirmModalComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { SharedModule } from '../shared/shared.module';
     CourseCardComponent
   ],
   entryComponents: [
-    CourseModalComponent
+    CourseModalComponent,
+    CourseConfirmModalComponent
   ]
 })
 export class CourseModule { }

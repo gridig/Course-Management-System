@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   @Input() title: string;
   @Output() addClicked = new EventEmitter();
 
@@ -17,4 +18,5 @@ export class HeaderComponent implements OnInit {
   addNew() {
     this.addClicked.emit();
   }
+
 }

@@ -7,22 +7,22 @@
   </div>
   <div class="modal-body">
     <form [formGroup]="courseForm" novalidate>
-      
+
       <div class="input-group mb-3">
-        <input 
-        [ngClass]="{ 'is-invalid': nameField.touched && nameField.errors }"
-        type="text" placeholder="Course name" class="form-control" name="name" formControlName="name">
-<!--           <div *ngIf="courseForm.get('name').touched && courseForm.get('name').errors.required">
-            Name is required
-          </div> -->
-          <div *ngIf="nameField.errors" class="invalid-feedback">
-            <div *ngIf="nameField.hasError('required')">Name is required</div>
-            <div *ngIf="nameField.hasError('minlength')">Must have at least 6 characters</div>
-          </div>
+        <input [ngClass]="{ 'is-invalid': nameField.touched && nameField.errors }" type="text" placeholder="Course name"
+          class="form-control" name="name" formControlName="name">
+        <div *ngIf="nameField.errors" class="invalid-feedback">
+          <span *ngIf="nameField.hasError('required')">Name is required</span>
+          <span *ngIf="nameField.hasError('minlength')">Must have at least 6 characters </span>
+        </div> 
       </div>
 
       <div class="input-group mb-3">
-        <input type="text" placeholder="Location" class="form-control" formControlName="location">
+        <input [ngClass]="{ 'is-invalid': locationField.touched && locationField.errors }" type="text"
+          placeholder="Location" class="form-control" formControlName="location">
+        <div *ngIf="locationField.errors" class="invalid-feedback">
+          <span *ngIf="locationField.hasError('required')">Location is required</span>
+        </div>
       </div>
 
       <div class="input-group mb-3">
@@ -35,52 +35,50 @@
 
       <div class="input-group mb-3">
 
-      <ng-select [items]="teachers"
-                  [selectOnTab]="true"
-                  placeholder="Select teacher"
-                  bindValue="id"
-                  formControlName="teacherId">
-                  <ng-template ng-label-tmp ng-option-tmp let-item="item">
-                    {{item.firstName}} {{item.lastName}}
-                </ng-template>
+        <ng-select [items]="teachers" [selectOnTab]="true" placeholder="Select teacher" bindValue="id"
+          formControlName="teacherId" required>
+          <ng-template ng-label-tmp ng-option-tmp let-item="item">
+            {{item.firstName}} {{item.lastName}}
+          </ng-template>
         </ng-select>
+        <div *ngIf="teacherField.touched && teacherField.errors" class="custom-invalid">
+          <span *ngIf="teacherField.hasError('required')">Teacher is required</span>
+        </div>
       </div>
+
       <div class="input-group mb-3">
 
-        <ng-select  
-                  [multiple]="true"
-                  [items]="students"
-                  [selectOnTab]="true"
-                  bindValue="id"
-                  placeholder="Select student"
-                  formControlName="studentIds">
-                  <ng-template ng-label-tmp ng-option-tmp let-item="item">
-                    {{item.firstName}} {{item.lastName}}
-                </ng-template>
+        <ng-select [multiple]="true" [items]="students" [selectOnTab]="true" bindValue="id" placeholder="Select student"
+          formControlName="studentIds">
+          <ng-template ng-label-tmp ng-option-tmp let-item="item">
+            {{item.firstName}} {{item.lastName}}
+          </ng-template>
         </ng-select>
       </div>
 
       <div class="input-group mb-3">
-        <input type="text"
-           placeholder="Start date"
-           class="form-control"
-           formControlName="startDate"
-           value="{{ courseForm.get('startDate').value | date }}"
-           bsDatepicker>
+        <input type="text" [ngClass]="{ 'is-invalid': startDateField.touched && startDateField.errors }"
+          placeholder="Start date" class="form-control" formControlName="startDate"
+          [value]="startDateField.value | date" [minDate]="startDateMin" [maxDate]="startDateMax" bsDatepicker>
+        <div *ngIf="startDateField.errors" class="invalid-feedback">
+          <span *ngIf="startDateField.hasError('required')">Start date is required</span>
+        </div>
       </div>
 
       <div class="input-group mb-3">
-          <input type="text"
-             placeholder="End date"
-             class="form-control"
-             formControlName="endDate"
-             bsDatepicker>
+        <input type="text" [ngClass]="{ 'is-invalid': endDateField.touched && endDateField.errors }"
+          placeholder="End date" class="form-control" formControlName="endDate" [value]="endDateField.value | date"
+          [minDate]="endDateMin" bsDatepicker>
+
+        <div *ngIf="endDateField.errors" class="invalid-feedback">
+          <span *ngIf="endDateField.hasError('required')">End date is required</span>
         </div>
+      </div>
 
       <div class="input-group mb-3">
-          <textarea type="text" placeholder="Course description" class="form-control" name="description"
-            formControlName="description"></textarea>
-        </div>
+        <textarea type="text" placeholder="Course description" class="form-control" name="description"
+          formControlName="description"></textarea>
+      </div>
     </form>
   </div>
   <div class="modal-footer">

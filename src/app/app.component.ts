@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'cm-root',
@@ -8,4 +7,5 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AppComponent {
   title = 'course-management';
+
 }

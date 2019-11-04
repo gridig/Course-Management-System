@@ -10,7 +10,8 @@ import { TeacherModalComponent } from '../teacher-modal/teacher-modal.component'
   styleUrls: ['./teacher-list.component.css']
 })
 export class TeacherListComponent implements OnInit {
-title = 'Teachers';
+
+  title = 'Teachers';
   teachers: TeacherModel[];
   bsModalRef: BsModalRef;
 

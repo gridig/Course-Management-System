@@ -8,10 +8,16 @@ import { StudentListComponent } from './student/student-list/student-list.compon
 import { TeacherListComponent } from './teacher/teacher-list/teacher-list.component';
 import { AuthGuard } from './core/guards/auth.guard';
 
+
 const routes: Routes = [
   {
     path: 'auth',
     loadChildren: './auth/auth.module#AuthModule'
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: '',
@@ -40,7 +46,7 @@ const routes: Routes = [
     path: '**',
     component: Page404Component
   }
-];
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

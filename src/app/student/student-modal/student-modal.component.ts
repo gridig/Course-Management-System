@@ -38,12 +38,24 @@ export class StudentModalComponent implements OnInit {
       );
   }
 
+  get firstNameField() {
+    return this.studentForm.controls.firstName;
+  }
+
+  get lastNameField() {
+    return this.studentForm.controls.lastName;
+  }
+
+  get emailField() {
+    return this.studentForm.controls.email;
+  }
+
   private createStudentForm() {
     this.studentForm = new FormGroup({
       firstName: new FormControl(this.student.firstName, Validators.required),
       lastName: new FormControl(this.student.lastName, Validators.required),
-      email: new FormControl(this.student.email),
-      gender: new FormControl(this.student.gender),
+      email: new FormControl(this.student.email, [Validators.required, Validators.email]),
+      gender: new FormControl(this.student.gender || 'male'),
       phoneNumber: new FormControl(this.student.phoneNumber)
     });
   }

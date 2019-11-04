@@ -11,7 +11,8 @@ import { StudentModalComponent } from '../student-modal/student-modal.component'
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
-  title = 'Student';
+  
+  title = 'Students';
   students: StudentModel[];
   bsModalRef: BsModalRef;
 

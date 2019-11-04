@@ -1,10 +1,7 @@
 <div class="container">
-    <cm-header [title]= "title" (addClicked)="addTeacher()"></cm-header>
-  <div class="row mb-3 justify-content-end">
-<!--     <div class="col-2">
-      <button class="btn btn-outline-primary" (click)="addTeacher()">Add New</button>
-    </div> -->
-  </div>
+  
+  <cm-header [title]="title" (addClicked)="addTeacher()"></cm-header>
+
   <div class="row">
     <div class="col">
       <table class="table table-bordered">
@@ -16,8 +13,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let teacher of teachers">
-            <td>{{teacher.id}}</td>
+          <tr *ngFor="let teacher of teachers; let i = index">
+            <td>{{i + 1}}</td>
             <td>{{teacher.firstName}} {{teacher.lastName}}</td>
             <td>
               <button (click)=editTeacher(teacher) type="button" class="btn btn-outline-info btn-sm">

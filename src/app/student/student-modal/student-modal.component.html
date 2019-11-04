@@ -8,17 +8,31 @@
   <div class="modal-body">
     <form [formGroup]="studentForm">
       <div class="input-group mb-3">
-        <input type="text" placeholder="First name" class="form-control" name="firstName" formControlName="firstName">
+        <input [ngClass]="{ 'is-invalid': firstNameField.touched && firstNameField.errors }" type="text"
+          placeholder="First name" class="form-control" name="firstName" formControlName="firstName">
+        <div *ngIf="firstNameField.errors" class="invalid-feedback">
+          <span *ngIf="firstNameField.hasError('required')">Field is required</span>
+        </div> 
       </div>
 
       <div class="input-group mb-3">
-        <input type="text" placeholder="Last name" class="form-control" name="lastName" formControlName="lastName">
+        <input [ngClass]="{ 'is-invalid': lastNameField.touched && lastNameField.errors }" type="text"
+          placeholder="Last name" class="form-control" name="lastName" formControlName="lastName">
+        <div *ngIf="lastNameField.errors" class="invalid-feedback">
+          <span *ngIf="lastNameField.hasError('required')">Field is required</span>
+        </div> 
       </div>
+
       <div class="input-group mb-3">
-        <input type="email" placeholder="Email" class="form-control" name="email" formControlName="email">
+        <input [ngClass]="{ 'is-invalid': emailField.touched && emailField.errors }" type="email" placeholder="Email"
+          class="form-control" name="email" formControlName="email">
+        <div *ngIf="emailField.errors" class="invalid-feedback">
+          <span *ngIf="emailField.hasError('required')">Field is required</span>
+          <span *ngIf="emailField.hasError('email')">Invalid email</span>
+        </div> 
       </div>
+
       <div class="group-gap">
-
 
         <div class="custom-control custom-radio">
           <input id="male" type="radio" class="custom-control-input" value="male" name="gender"

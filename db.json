@@ -1,18 +1,31 @@
 {
+  "login": {
+    "username": "admin11",
+    "password": "admin"
+  },
   "courses": [
     {
-      "name": "AngularJS Course",
-      "description": "Test description. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "location": "Sarajevo",
-      "address": "",
-      "state": "",
-      "startDate": null,
-      "endDate": "2018-04-20T18:47:42.000Z",
+      "name": "React Course",
       "teacherId": 2,
-      "studentsIds": [
-        2,
-        1
-      ],
+      "startDate": "2019-11-04T16:15:09.000Z",
+      "endDate": "2018-04-20T18:47:42.000Z",
+      "location": "Sarajevo",
+      "state": "",
+      "address": "",
+      "studentIds": [],
+      "description": "Test description. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 2
+    },
+    {
+      "name": "AngularJS Course",
+      "teacherId": 2,
+      "startDate": "2019-11-04T16:15:09.000Z",
+      "endDate": "2018-04-20T18:47:42.000Z",
+      "location": "Sarajevo",
+      "state": "",
+      "address": "",
+      "studentIds": [],
+      "description": "Test description. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "id": 3
     },
     {
@@ -23,8 +36,8 @@
       "state": "",
       "startDate": "2018-04-03T21:43:13.000Z",
       "endDate": "2018-04-20T21:43:13.000Z",
-      "teacherId": null,
-      "studentsIds": null,
+      "teacherId": "",
+      "studentsIds": [],
       "id": 4
     },
     {
@@ -35,8 +48,8 @@
       "state": "",
       "startDate": "2018-04-03T21:43:13.000Z",
       "endDate": "2018-04-20T21:43:13.000Z",
-      "teacherId": null,
-      "studentsIds": null,
+      "teacherId": "",
+      "studentsIds": [],
       "id": 5
     },
     {
@@ -47,8 +60,8 @@
       "state": "",
       "startDate": "2018-04-03T21:43:13.000Z",
       "endDate": "2018-04-20T21:43:13.000Z",
-      "teacherId": null,
-      "studentsIds": null,
+      "teacherId": "",
+      "studentsIds": [],
       "id": 6
     },
     {
@@ -59,35 +72,58 @@
       "state": "",
       "startDate": "2018-04-03T21:43:13.000Z",
       "endDate": "2018-04-20T21:43:13.000Z",
-      "teacherId": null,
-      "studentsIds": null,
+      "teacherId": "",
+      "studentsIds": [],
       "id": 7
     },
     {
       "name": "French Course",
-      "description": "It is a long established fact that a reader will be distracted by t",
+      "teacherId": 3,
+      "startDate": "2019-11-04T16:35:33.000Z",
+      "endDate": "2019-11-29T16:35:33.000Z",
       "location": "Las Vegas",
-      "address": "",
       "state": "",
-      "startDate": null,
-      "endDate": "2018-04-24T22:00:00.000Z",
-      "teacherId": null,
-      "studentsIds": null,
+      "address": "",
+      "studentIds": [],
+      "description": "It is a long established fact that a reader will be distracted by t",
       "id": 8
     },
     {
-      "name": "new course",
-      "description": "desc",
-      "teacherId": 1,
+      "name": "English Course",
+      "teacherId": 2,
+      "startDate": "2018-04-03T21:43:13.000Z",
+      "endDate": "2018-04-20T21:43:13.000Z",
+      "location": "Sarajevo",
+      "state": "BiH",
+      "address": "Neki address",
       "studentIds": [
-        1
+        2,
+        3
       ],
-      "startDate": "2019-10-31T07:55:52.000Z",
-      "endDate": "2019-11-03T23:00:00.000Z",
-      "location": "new location",
-      "address": "add",
-      "state": "sta",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. ",
       "id": 9
+    },
+    {
+      "name": "Test 10",
+      "description": "Test dest ",
+      "teacherId": 2,
+      "studentIds": [
+        2
+      ],
+      "date": "2019-10-04T17:04:54.000Z",
+      "id": 11
+    },
+    {
+      "name": "Test course 2423242",
+      "teacherId": 1,
+      "startDate": "2019-11-05T17:50:49.000Z",
+      "endDate": "2019-11-21T17:50:49.000Z",
+      "location": "Sarajevo",
+      "state": "",
+      "address": "",
+      "studentIds": [],
+      "description": "",
+      "id": 12
     }
   ],
   "students": [
@@ -96,7 +132,7 @@
       "lastName": "Riatt",
       "email": "hriatt0@nature.com",
       "gender": "Female",
-      "phone_number": "748-867-9240",
+      "phoneNumber": "748-867-9240",
       "id": 1
     },
     {
@@ -105,7 +141,7 @@
       "lastName": "Greswell",
       "email": "agreswell1@livejournal.com",
       "gender": "Male",
-      "phone_number": "386-795-7861"
+      "phoneNumber": "386-795-7861"
     },
     {
       "id": 3,
@@ -113,7 +149,7 @@
       "lastName": "Jobke",
       "email": "kjobke2@fda.gov",
       "gender": "Female",
-      "phone_number": "370-126-1669"
+      "phoneNumber": "370-126-1669"
     },
     {
       "id": 4,
@@ -121,7 +157,7 @@
       "lastName": "Proudlock",
       "email": "sproudlock3@psu.edu",
       "gender": "Female",
-      "phone_number": "800-877-8769"
+      "phoneNumber": "800-877-8769"
     },
     {
       "id": 5,
@@ -129,7 +165,7 @@
       "lastName": "Bellringer",
       "email": "bbellringer4@123-reg.co.uk",
       "gender": "Male",
-      "phone_number": "110-172-2161"
+      "phoneNumber": "110-172-2161"
     },
     {
       "id": 6,
@@ -137,7 +173,7 @@
       "lastName": "Oxton",
       "email": "boxton5@godaddy.com",
       "gender": "Female",
-      "phone_number": "842-864-2284"
+      "phoneNumber": "842-864-2284"
     },
     {
       "id": 7,
@@ -145,7 +181,7 @@
       "lastName": "Giddens",
       "email": "jgiddens6@elegantthemes.com",
       "gender": "Female",
-      "phone_number": "202-753-7352"
+      "phoneNumber": "202-753-7352"
     },
     {
       "id": 8,
@@ -153,7 +189,23 @@
       "lastName": "Kelston",
       "email": "nkelston7@usgs.gov",
       "gender": "Male",
-      "phone_number": "477-417-3433"
+      "phoneNumber": "477-417-3433"
+    },
+    {
+      "id": 9,
+      "firstName": "Antoni",
+      "lastName": "Vitler",
+      "email": "avitler8@ask.com",
+      "gender": "Male",
+      "phoneNumber": "693-134-9141"
+    },
+    {
+      "id": 10,
+      "firstName": "Jed",
+      "lastName": "Vincent",
+      "email": "jvincent9@usgs.gov",
+      "gender": "Male",
+      "phoneNumber": "856-821-7697"
     }
   ],
   "teachers": [
@@ -163,7 +215,7 @@
       "lastName": "Vany",
       "email": "cvany0@bing.com",
       "gender": "Female",
-      "phone_number": "111-954-6148",
+      "phoneNumber": "111-954-6148",
       "website": "flickr.com",
       "company": "Tagcat"
     },
@@ -173,7 +225,7 @@
       "lastName": "Keems",
       "email": "hkeems1@ed.gov",
       "gender": "Female",
-      "phone_number": "772-507-4133",
+      "phoneNumber": "772-507-4133",
       "website": "icio.us",
       "company": "Dabvine"
     },
@@ -183,7 +235,7 @@
       "lastName": "Esplin",
       "email": "resplin2@oakley.com",
       "gender": "Male",
-      "phone_number": "420-382-7641",
+      "phoneNumber": "420-382-7641",
       "website": "earthlink.net",
       "company": "Devbug"
     },
@@ -193,7 +245,7 @@
       "lastName": "M'Quhan",
       "email": "pmquhan3@pagesperso-orange.fr",
       "gender": "Female",
-      "phone_number": "733-869-0541",
+      "phoneNumber": "733-869-0541",
       "website": "yale.edu",
       "company": "DabZ"
     },
@@ -203,7 +255,7 @@
       "lastName": "Kapelhof",
       "email": "wkapelhof4@salon.com",
       "gender": "Male",
-      "phone_number": "546-329-5220",
+      "phoneNumber": "546-329-5220",
       "website": "godaddy.com",
       "company": "Kwilith"
     },
@@ -213,7 +265,7 @@
       "lastName": "Laird-Craig",
       "email": "alairdcraig5@state.gov",
       "gender": "Female",
-      "phone_number": "944-455-9912",
+      "phoneNumber": "944-455-9912",
       "website": "dedecms.com",
       "company": "Jetwire"
     },
@@ -223,7 +275,7 @@
       "lastName": "Lorente",
       "email": "mlorente6@smugmug.com",
       "gender": "Female",
-      "phone_number": "879-875-8556",
+      "phoneNumber": "879-875-8556",
       "website": "newsvine.com",
       "company": "Cogilith"
     },
@@ -233,7 +285,7 @@
       "lastName": "Masding",
       "email": "cmasding7@miitbeian.gov.cn",
       "gender": "Male",
-      "phone_number": "703-172-7463",
+      "phoneNumber": "703-172-7463",
       "website": "usnews.com",
       "company": "Yabox"
     },
@@ -243,9 +295,19 @@
       "lastName": "Winridge",
       "email": "bwinridge8@51.la",
       "gender": "Male",
-      "phone_number": "694-634-0725",
+      "phoneNumber": "694-634-0725",
       "website": "ibm.com",
       "company": "Flashpoint"
+    },
+    {
+      "id": 10,
+      "firstName": "Clare",
+      "lastName": "Newcome",
+      "email": "cnewcome9@imageshack.us",
+      "gender": "Female",
+      "phoneNumber": "829-505-9157",
+      "website": "yandex.ru",
+      "company": "Feednation"
     }
   ]
 }
