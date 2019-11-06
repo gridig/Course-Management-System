@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseModel } from '../core/course.model';
-import { compileBaseDefFromMetadata } from '@angular/compiler';
 
 @Component({
   selector: 'cm-course-card',
