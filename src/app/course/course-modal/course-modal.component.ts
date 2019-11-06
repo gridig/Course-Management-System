@@ -23,6 +23,8 @@ export class CourseModalComponent implements OnInit {
   students: StudentModel[];
   today =  Date.now();
   startDateMin = new Date(this.today);
+  title: string;
+  closeBtnName: string;
 
   onSubmitSuccess = new EventEmitter();
 
@@ -108,6 +110,10 @@ export class CourseModalComponent implements OnInit {
       description: new FormControl(this.course.description),
     });
 
+  }
+
+  ngOnDestroy(): void {
+    this.onSubmitSuccess.unsubscribe();
   }
 
 }

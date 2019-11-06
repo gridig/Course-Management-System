@@ -12,6 +12,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseModalComponent } from './course-modal/course-modal.component';
 import { SharedModule } from '../shared/shared.module';
 import { CourseConfirmModalComponent } from './course-confirm-modal/course-confirm-modal.component';
+import { CourseRoutingModule } from './course-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CourseConfirmModalComponent } from './course-confirm-modal/course-confi
     ReactiveFormsModule,
     NgSelectModule,
     BsDatepickerModule.forRoot(),
-    SharedModule
+    SharedModule,
+    CourseRoutingModule
   ],
   providers: [
     CourseService,

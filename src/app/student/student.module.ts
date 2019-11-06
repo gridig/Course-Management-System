@@ -8,6 +8,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentService } from './core/student.service';
 import { StudentModalComponent } from './student-modal/student-modal.component';
 import { SharedModule } from '../shared/shared.module';
+import { StudentRoutingModule } from './student-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SharedModule } from '../shared/shared.module';
     ModalModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    StudentRoutingModule
   ],
   providers: [
     StudentService,

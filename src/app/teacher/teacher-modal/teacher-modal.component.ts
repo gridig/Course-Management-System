@@ -15,6 +15,8 @@ export class TeacherModalComponent implements OnInit {
   teacher: TeacherModel;
   teacherForm: FormGroup;
   radioGroupForm: FormGroup;
+  title: string;
+  closeBtnName: string;
 
   constructor(
     public bsModalRef: BsModalRef,

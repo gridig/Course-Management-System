@@ -13,6 +13,8 @@ export class StudentModalComponent implements OnInit {
   student: StudentModel;
   studentForm: FormGroup;
   radioGroupForm: FormGroup;
+  title: string;
+  closeBtnName: string;
 
   constructor(
     public bsModalRef: BsModalRef,

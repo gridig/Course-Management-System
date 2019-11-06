@@ -8,6 +8,7 @@ import { TeacherService } from './core/teacher.service';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { TeacherModalComponent } from './teacher-modal/teacher-modal.component';
 import { SharedModule } from '../shared/shared.module';
+import { TeacherRoutingModule } from './teacher-routing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     ModalModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    TeacherRoutingModule
   ],
   providers: [
     TeacherService,

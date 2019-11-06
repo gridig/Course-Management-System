@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home/home.component';
 import { CourseModule } from '../course/course.module';
+import { HomeRoutingModule } from './home-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -10,6 +12,7 @@ import { CourseModule } from '../course/course.module';
   ],
   imports: [
     CommonModule,
+    HomeRoutingModule,
     CourseModule
   ],
   providers: [],
