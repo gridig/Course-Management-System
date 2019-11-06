@@ -3,6 +3,9 @@
     <h1 class="title">
       <a class="nav-link active">Course Management System</a>
     </h1>
+    <div class="logout-btn">
+      <button class="btn btn-outline-default" type="button" (click)="logout()">Logout</button>
+    </div>
   </nav>
 </header>
 <div>
@@ -10,8 +13,10 @@
     <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
       <a class="nav-link nav-link-sidebar" [routerLink]="['/home']" routerLinkActive="active" role="tab">Home</a>
       <a class="nav-link nav-link-sidebar" [routerLink]="['/courses']" routerLinkActive="active" role="tab">Courses</a>
-      <a class="nav-link nav-link-sidebar" [routerLink]="['/students']" routerLinkActive="active" role="tab">Students</a>
-      <a class="nav-link nav-link-sidebar" [routerLink]="['/teachers']" routerLinkActive="active" role="tab">Teachers</a>
+      <a class="nav-link nav-link-sidebar" [routerLink]="['/students']" routerLinkActive="active"
+        role="tab">Students</a>
+      <a class="nav-link nav-link-sidebar" [routerLink]="['/teachers']" routerLinkActive="active"
+        role="tab">Teachers</a>
     </div>
   </div>
   <div class="main-content">
