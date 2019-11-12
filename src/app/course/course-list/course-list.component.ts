@@ -50,7 +50,6 @@ export class CourseListComponent implements OnInit {
   private openConfirmModal(course: CourseModel) {
     this.bsModalRef = this.modalService.show(CourseConfirmModalComponent);
     this.bsModalRef.content.title = `Delete ${course.name} ?`;
-    console.log(this.bsModalRef.content.title);
     this.bsModalRef.content.onConfirm.subscribe((shouldDelete: boolean) => {
       if (!shouldDelete) {
         return

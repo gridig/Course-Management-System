@@ -22,19 +22,19 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        loadChildren: './home/home.module#HomeModule',
+        loadChildren: './home/home.module#HomeModule'
       },
       {
         path: 'courses',
-        loadChildren: './course/course.module#CourseModule',
+        loadChildren: './course/course.module#CourseModule'
       },
       {
         path: 'students',
-        loadChildren: './student/student.module#StudentModule',
+        loadChildren: './student/student.module#StudentModule'
       },
       {
         path: 'teachers',
-        loadChildren: './teacher/teacher.module#TeacherModule',
+        loadChildren: './teacher/teacher.module#TeacherModule'
       }
     ]
   },

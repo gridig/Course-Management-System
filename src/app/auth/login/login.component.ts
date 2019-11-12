@@ -1,8 +1,9 @@
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { AlertService } from 'src/app/shared/alert/alert.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'cm-login',
@@ -51,6 +52,7 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
 
   private createLoginForm() {
     this.loginForm = new FormGroup({

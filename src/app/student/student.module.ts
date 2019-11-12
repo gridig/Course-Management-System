@@ -23,6 +23,7 @@ import { StudentRoutingModule } from './student-routing.module';
     ReactiveFormsModule,
     SharedModule,
     StudentRoutingModule
+
   ],
   providers: [
     StudentService,

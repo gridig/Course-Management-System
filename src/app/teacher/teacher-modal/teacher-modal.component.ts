@@ -16,7 +16,7 @@ export class TeacherModalComponent implements OnInit {
   teacherForm: FormGroup;
   radioGroupForm: FormGroup;
   title: string;
-  closeBtnName: string;
+  closeBtnName: string
 
   constructor(
     public bsModalRef: BsModalRef,
@@ -54,7 +54,7 @@ export class TeacherModalComponent implements OnInit {
   get emailField() {
     return this.teacherForm.controls.email;
   }
-  
+
   get websiteField() {
     return this.teacherForm.controls.website;
   }
@@ -67,6 +67,7 @@ export class TeacherModalComponent implements OnInit {
       gender: new FormControl(this.teacher.gender || 'male'),
       phoneNumber: new FormControl(this.teacher.phoneNumber),
       company: new FormControl(this.teacher.company),
+      // tslint:disable-next-line: max-line-length
       website: new FormControl(this.teacher.website, Validators.pattern(/^(https?:\/\/)?(www\.)?([a-zA-Z0-9]+(-?[a-zA-Z0-9])*\.)+[\w]{2,}(\/\S*)?$/))
     });
   }

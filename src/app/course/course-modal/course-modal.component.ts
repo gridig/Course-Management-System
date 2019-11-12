@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, EventEmitter, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
@@ -16,7 +16,7 @@ import { AlertService } from 'src/app/shared/alert/alert.service';
   styleUrls: ['./course-modal.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class CourseModalComponent implements OnInit {
+export class CourseModalComponent implements OnInit, OnDestroy {
   course: CourseModel;
   courseForm: FormGroup;
   teachers: TeacherModel[];

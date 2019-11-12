@@ -19,4 +19,5 @@ export class FullLayoutComponent implements OnInit {
     localStorage.removeItem('currentUser');
     this.router.navigate(['auth/login']);
   }
+
 }

@@ -22,7 +22,7 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     CoreModule,
-    Page404Module
+    Page404Module,
   ],
   providers: [],
   bootstrap: [AppComponent]
