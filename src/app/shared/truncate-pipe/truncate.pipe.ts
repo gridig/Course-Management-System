@@ -6,7 +6,7 @@ export class TruncatePipe implements PipeTransform {
         if (completeWord) {
             limit = value.length > limit ? value.substr(0, limit).lastIndexOf(' ') : limit;
         }
-        
+
         return value.length > limit ? value.substr(0, limit) + '...' : value;
     }
 }
