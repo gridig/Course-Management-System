@@ -1,4 +1,4 @@
-# Academy387 Course Management System Angular Tutorial
+# Academy387 Course Management System Angular Course
 
 ## Week 1
 Getting started with Angular. Modules, Components and Services
